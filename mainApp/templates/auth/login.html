@@ -1,0 +1,16 @@
+{%extends 'auth/authbase.html'%} {%load static%} {%block hdr%} Login Page
+{%endblock%} <br />
+
+{% block frm %}
+
+<p>Fill the Form with Your details to Log in</p>
+<form action="" method="post">
+  {{form.as_p}}
+  <a href="{% url 'home'%}">
+    <button type="submit">Login</button>
+  </a>
+</form>
+
+<span>Dont have an account, <a href="{% url 'signup' %}">Sign Up</a></span>
+
+{% endblock %}
