@@ -42,4 +42,6 @@ class Auth:
     
     def createProfile(request):
         form=forms.ProfileCreation
+        
         return render(request,"auth/createprofile.html", {'form':form})
+    
