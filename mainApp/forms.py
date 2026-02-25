@@ -34,6 +34,7 @@ class AddPropertyForm(forms.ModelForm):
     Density = forms.ChoiceField(choices=Densities)
     Rooms=forms.IntegerField()
     Features=forms.CharField(widget=forms.Textarea(attrs={'rows': 5, 'cols': 40}))
+    Price=forms.IntegerField()
 
     class Meta:
         model = House

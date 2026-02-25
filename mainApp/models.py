@@ -25,4 +25,5 @@ class House(models.Model):
     Features=models.TextField(default="")
     ownerId=models.ForeignKey(Owner, null=True, on_delete=models.CASCADE)
     Avilability=models.BooleanField(default=False)
+    Price=models.IntegerField(null=True)
 

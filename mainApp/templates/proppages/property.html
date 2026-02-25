@@ -36,15 +36,18 @@
         background-color: aliceblue;
         height: clamp(8%, 7vh, 24px);
         align-items: center;
+        position: sticky;
+        top: 0;
     }
 
     .logo {
         font-size: larger;
         font-weight: 700;
+        color: #007bff;
     }
 
     .actions {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(255, 255, 255, 0.5);
         height: 70%;
         place-items: center;
         border-radius: 8px;
@@ -53,6 +56,8 @@
         corner-shape: sqircle;
         display: flex;
         align-items: center;
+        aspect-ratio: 1/1;
+        justify-content: center;
     }
 
     .container {
@@ -70,9 +75,11 @@
         height: fit-content;
         width: clamp(50%, 96vw, 600px);
         box-sizing: border-box;
-        box-sizing: border-box;
         padding: 4px;
-        gap: 8px;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+
     }
 
     .img {
@@ -90,7 +97,7 @@
         gap: 8px;
         height: fit-content;
         box-sizing: border-box;
-        background-color: aliceblue;
+        background-color: rgb(255, 255, 255);
         border-radius: 16px;
     }
 
@@ -120,6 +127,10 @@
         aspect-ratio: 4/3;
     }
 
+    .i {
+        padding: 010px;
+    }
+
     .i:nth-child(odd) {
         background-color: white;
     }
@@ -138,6 +149,27 @@
         align-items: center;
         gap: 10px;
     }
+
+    .contactowner {
+        width: 100%;
+        background-color: white;
+        height: 56px;
+        border-radius: 12px;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        align-content: center;
+        justify-content: space-between;
+        justify-items: center;
+    }
+
+    .svgic {
+        height: 24px;
+        width: 24px;
+        display: grid;
+        place-content: center;
+    }
 </style>
 
 <body>
@@ -145,11 +177,11 @@
         <div class="logo">
             logo
         </div>
-        <div class="description">
+        <div class="housedescription">
             house 4
         </div>
         <div class="actions">
-            actions
+            <img src="close.svg" alt="" srcset="" class="svgic">
         </div>
     </div>
     <div class="container">
@@ -174,8 +206,9 @@
                     </div>
                 </div>
             </div>
-            <div class="contactowner">
-                contact owner
+            <div class="contactowner fw600">
+                <span>contact owner</span>
+                <span><img src="next.svg" alt="" srcset="" class="svgic"></span>
             </div>
 
         </div>
