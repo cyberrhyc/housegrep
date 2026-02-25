@@ -66,15 +66,58 @@
     }
 
     .innercont {
-        background-color: red;
         min-height: 70%;
         height: fit-content;
         width: clamp(50%, 96vw, 600px);
         box-sizing: border-box;
+        background-color: aliceblue;
+        border-radius: 16px;
+        box-sizing: border-box;
+        padding: 4px;
+        gap: 8px;
     }
 
     .img {
-        width: clamp(100%);
+        height: auto;
+        aspect-ratio: 4/3;
+        box-sizing: border-box;
+        border: 1px solid green;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .hsmall {
+        width: 100%;
+    }
+
+    @media (min-width: 720px) {
+        .hsmall {
+            width: 50%;
+        }
+
+        .description {
+            flex-direction: row;
+        }
+    }
+
+
+
+    .itable:nth-child(even) {
+        background-color: red;
+    }
+
+    .itable:nth-child(odd) {
+        background-color: green;
+    }
+
+    .fw600 {
+        font-weight: 600;
     }
 </style>
 
@@ -92,7 +135,30 @@
     </div>
     <div class="container">
         <div class="innercont">
-            <img src="" alt="" srcset="" class="img">
+            <div class="description">
+                <img src="signup.svg" alt="" srcset="" class="hsmall">
+                <div class="hsmall itable fw600">
+                    <div class="name">
+                        House Number
+                    </div>
+                    <div class="ownername">
+                        Mr Moyo
+                    </div>
+                    <div class="location">
+                        Vengere, Rusape
+                    </div>
+                    <div class="rooms">
+                        2
+                    </div>
+                    <div class="amount">
+                        45 per month
+                    </div>
+                </div>
+            </div>
+            <div class="contactowner">
+                contact owner
+            </div>
+
         </div>
     </div>
 </body>
