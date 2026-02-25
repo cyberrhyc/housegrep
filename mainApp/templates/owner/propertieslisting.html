@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 100vh;
+        width: 100vw;
+        box-sizing: border-box;
+        margin: 0;
+        font-family:
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Oxygen,
+            Ubuntu,
+            Cantarell,
+            "Open Sans",
+            "Helvetica Neue",
+            sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 clamp(7%, 16px, 4em);
+        box-sizing: border-box;
+        background-color: aliceblue;
+        height: clamp(8%, 7vh, 24px);
+        align-items: center;
+        position: sticky;
+        top: 0;
+    }
+
+    .logo {
+        font-size: larger;
+        font-weight: 700;
+        color: #007bff;
+    }
+
+    .actions {
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 70%;
+        place-items: center;
+        border-radius: 8px;
+        padding: 2px;
+        box-sizing: border-box;
+        corner-shape: sqircle;
+        display: flex;
+        align-items: center;
+        aspect-ratio: 1/1;
+        justify-content: center;
+    }
+
+    .container {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 16px 0;
+    }
+
+    .innercont {
+        min-height: 70%;
+        height: fit-content;
+        width: clamp(50%, 96vw, 600px);
+        box-sizing: border-box;
+        padding: 4px;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .img {
+        height: auto;
+        aspect-ratio: 4/3;
+        box-sizing: border-box;
+        border: 1px solid green;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 8px;
+        height: fit-content;
+        box-sizing: border-box;
+        background-color: rgb(255, 255, 255);
+        border-radius: 16px;
+    }
+
+    .hsmall {
+        width: 100%;
+        border-radius: 12px;
+        box-sizing: border-box;
+        flex: 1;
+    }
+
+    @media (min-width: 720px) {
+        .hsmall {
+            width: 50%;
+        }
+
+        .description {
+            flex-direction: row;
+        }
+    }
+
+    .itable {
+        display: flex;
+        flex-direction: column;
+        padding: 6px;
+        height: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+    }
+
+    .i {
+        padding: 0 10px;
+    }
+
+    .i:nth-child(odd) {
+        background-color: white;
+    }
+
+    .i:nth-child(even) {
+        background-color: #f0f0f0;
+    }
+
+    .fw600 {
+        font-weight: 600;
+    }
+
+    .i {
+        height: 20%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contactowner {
+        width: 100%;
+        background-color: white;
+        height: 56px;
+        border-radius: 12px;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        align-content: center;
+        justify-content: space-between;
+        justify-items: center;
+    }
+
+    .homedets {
+        width: 100%;
+        background-color: white;
+        height: 56px;
+        border-radius: 12px;
+        padding: 8px 12px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-content: center;
+        justify-content: space-between;
+        justify-items: center;
+    }
+
+    .svgic {
+        height: 24px;
+        width: 24px;
+        display: grid;
+        place-content: center;
+    }
+
+    .hfitcont {
+        height: fit-content;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            logo
+        </div>
+        <!-- <div class="housedescription">
+            house 4
+        </div> -->
+        <div class="actions">
+            <img src="close.svg" alt="" srcset="" class="svgic">
+        </div>
+    </div>
+    <div class="container">
+        <div class="innercont">
+            <div class="description">
+                <img src="signup.svg" alt="" srcset="" class="hsmall">
+                <div class="hsmall itable fw600">
+                    <div class="name i">
+                        House Number
+                    </div>
+                    <div class="ownername i">
+                        Mr Moyo
+                    </div>
+                    <div class="location i">
+                        Vengere, Rusape
+                    </div>
+                    <div class="rooms i">
+                        2
+                    </div>
+                    <div class="amount i">
+                        45 per month
+                    </div>
+                </div>
+            </div>
+            <div class="homedets  hfitcont">
+                <span class="fw600">
+                    Description:
+                </span>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit soluta perferendis aspernatur possimus
+                    quibusdam, dolorum esse vitae assumenda incidunt minus quas. At vel quod temporibus eaque
+                    repudiandae
+                    nobis fugiat aperiam.
+                </span>
+            </div>
+            <div class="contactowner fw600">
+                <span>Contact Owner</span>
+                <span><img src="next.svg" alt="" srcset="" class="svgic"></span>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
