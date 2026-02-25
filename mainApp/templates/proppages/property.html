@@ -70,8 +70,6 @@
         height: fit-content;
         width: clamp(50%, 96vw, 600px);
         box-sizing: border-box;
-        background-color: aliceblue;
-        border-radius: 16px;
         box-sizing: border-box;
         padding: 4px;
         gap: 8px;
@@ -88,12 +86,19 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-
+        align-items: stretch;
+        gap: 8px;
+        height: fit-content;
+        box-sizing: border-box;
+        background-color: aliceblue;
+        border-radius: 16px;
     }
 
     .hsmall {
         width: 100%;
+        border-radius: 12px;
+        box-sizing: border-box;
+        flex: 1;
     }
 
     @media (min-width: 720px) {
@@ -106,18 +111,32 @@
         }
     }
 
-
-
-    .itable:nth-child(even) {
-        background-color: red;
+    .itable {
+        display: flex;
+        flex-direction: column;
+        padding: 6px;
+        height: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
     }
 
-    .itable:nth-child(odd) {
-        background-color: green;
+    .i:nth-child(odd) {
+        background-color: white;
+    }
+
+    .i:nth-child(even) {
+        background-color: #f0f0f0;
     }
 
     .fw600 {
         font-weight: 600;
+    }
+
+    .i {
+        height: 20%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 </style>
 
@@ -138,19 +157,19 @@
             <div class="description">
                 <img src="signup.svg" alt="" srcset="" class="hsmall">
                 <div class="hsmall itable fw600">
-                    <div class="name">
+                    <div class="name i">
                         House Number
                     </div>
-                    <div class="ownername">
+                    <div class="ownername i">
                         Mr Moyo
                     </div>
-                    <div class="location">
+                    <div class="location i">
                         Vengere, Rusape
                     </div>
-                    <div class="rooms">
+                    <div class="rooms i">
                         2
                     </div>
-                    <div class="amount">
+                    <div class="amount i">
                         45 per month
                     </div>
                 </div>
