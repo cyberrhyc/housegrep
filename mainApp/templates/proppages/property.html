@@ -31,7 +31,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 0 clamp(1%, 16px, 4em);
+        padding: 0 clamp(7%, 16px, 4em);
         box-sizing: border-box;
         background-color: aliceblue;
         height: clamp(8%, 7vh, 24px);
@@ -128,7 +128,7 @@
     }
 
     .i {
-        padding: 010px;
+        padding: 0 10px;
     }
 
     .i:nth-child(odd) {
@@ -164,11 +164,29 @@
         justify-items: center;
     }
 
+    .homedets {
+        width: 100%;
+        background-color: white;
+        height: 56px;
+        border-radius: 12px;
+        padding: 8px 12px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-content: center;
+        justify-content: space-between;
+        justify-items: center;
+    }
+
     .svgic {
         height: 24px;
         width: 24px;
         display: grid;
         place-content: center;
+    }
+
+    .hfitcont {
+        height: fit-content;
     }
 </style>
 
@@ -177,9 +195,9 @@
         <div class="logo">
             logo
         </div>
-        <div class="housedescription">
+        <!-- <div class="housedescription">
             house 4
-        </div>
+        </div> -->
         <div class="actions">
             <img src="close.svg" alt="" srcset="" class="svgic">
         </div>
@@ -206,8 +224,19 @@
                     </div>
                 </div>
             </div>
+            <div class="homedets  hfitcont">
+                <span class="fw600">
+                    Description:
+                </span>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit soluta perferendis aspernatur possimus
+                    quibusdam, dolorum esse vitae assumenda incidunt minus quas. At vel quod temporibus eaque
+                    repudiandae
+                    nobis fugiat aperiam.
+                </span>
+            </div>
             <div class="contactowner fw600">
-                <span>contact owner</span>
+                <span>Contact Owner</span>
                 <span><img src="next.svg" alt="" srcset="" class="svgic"></span>
             </div>
 
