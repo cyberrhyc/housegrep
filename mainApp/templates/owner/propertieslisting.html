@@ -71,122 +71,65 @@
     }
 
     .innercont {
-        min-height: 70%;
-        height: fit-content;
-        width: clamp(50%, 96vw, 600px);
+        width: clamp(80%, 96vw, 600px);
         box-sizing: border-box;
-        padding: 4px;
-        gap: 16px;
-        display: flex;
-        flex-direction: column;
 
     }
 
-    .img {
-        height: auto;
-        aspect-ratio: 4/3;
-        box-sizing: border-box;
-        border: 1px solid green;
-    }
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: stretch;
-        gap: 8px;
-        height: fit-content;
-        box-sizing: border-box;
-        background-color: rgb(255, 255, 255);
-        border-radius: 16px;
-    }
-
-    .hsmall {
-        width: 100%;
-        border-radius: 12px;
-        box-sizing: border-box;
-        flex: 1;
-    }
-
-    @media (min-width: 720px) {
-        .hsmall {
-            width: 50%;
-        }
-
-        .description {
-            flex-direction: row;
-        }
-    }
-
-    .itable {
-        display: flex;
-        flex-direction: column;
-        padding: 6px;
-        height: 100%;
-        height: auto;
-        aspect-ratio: 4/3;
-    }
-
-    .i {
-        padding: 0 10px;
-    }
-
-    .i:nth-child(odd) {
-        background-color: white;
-    }
-
-    .i:nth-child(even) {
-        background-color: #f0f0f0;
-    }
-
-    .fw600 {
-        font-weight: 600;
-    }
-
-    .i {
-        height: 20%;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .contactowner {
-        width: 100%;
-        background-color: white;
-        height: 56px;
-        border-radius: 12px;
-        padding: 8px 12px;
-        display: flex;
-        align-items: center;
-        box-sizing: border-box;
-        align-content: center;
-        justify-content: space-between;
-        justify-items: center;
-    }
-
-    .homedets {
-        width: 100%;
-        background-color: white;
-        height: 56px;
-        border-radius: 12px;
-        padding: 8px 12px;
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        align-content: center;
-        justify-content: space-between;
-        justify-items: center;
-    }
-
-    .svgic {
-        height: 24px;
-        width: 24px;
+    .innercont {
         display: grid;
-        place-content: center;
+        gap: 10px;
+
     }
 
-    .hfitcont {
+
+    @media (min-width: 1025px) {
+        .innercont {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, auto);
+        }
+    }
+
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .innercont {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, auto);
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        .innercont {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+        }
+    }
+
+    .pcont {
+        background-color: aliceblue;
+        padding: 8px;
+        box-sizing: border-box;
+        border-radius: 16px;
         height: fit-content;
+    }
+
+    .numdets {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .details {
+        padding: 0 8px;
+        font-weight: 700;
+        background-color: rgb(255, 255, 255);
+        border-radius: 6px;
+    }
+
+    .location {
+        font-size: large;
+        font-weight: 600;
     }
 </style>
 
@@ -195,51 +138,99 @@
         <div class="logo">
             logo
         </div>
-        <!-- <div class="housedescription">
-            house 4
-        </div> -->
+        <div class="housedescription">
+            Properties
+        </div>
         <div class="actions">
             <img src="close.svg" alt="" srcset="" class="svgic">
         </div>
     </div>
     <div class="container">
         <div class="innercont">
-            <div class="description">
-                <img src="signup.svg" alt="" srcset="" class="hsmall">
-                <div class="hsmall itable fw600">
-                    <div class="name i">
-                        House Number
-                    </div>
-                    <div class="ownername i">
-                        Mr Moyo
-                    </div>
-                    <div class="location i">
-                        Vengere, Rusape
-                    </div>
-                    <div class="rooms i">
-                        2
-                    </div>
-                    <div class="amount i">
-                        45 per month
+            <div class="pcont">
+                <div class="desc">
+                    <img src="signup.svg" alt="" class="img">
+                    <div class="details">
+                        <div class="location">Mutare, Hob House</div>
+                        <div class="numdets">
+                            <div class="price">$ 70</div>
+                            <div class="roomcount">2 Rooms</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="homedets  hfitcont">
-                <span class="fw600">
-                    Description:
-                </span>
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit soluta perferendis aspernatur possimus
-                    quibusdam, dolorum esse vitae assumenda incidunt minus quas. At vel quod temporibus eaque
-                    repudiandae
-                    nobis fugiat aperiam.
-                </span>
+            <div class="pcont">
+                <div class="desc">
+                    <img src="signup.svg" alt="" class="img">
+                    <div class="details">
+                        <div class="location">Mutare, Hob House</div>
+                        <div class="numdets">
+                            <div class="price">$ 70</div>
+                            <div class="roomcount">2 Rooms</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="contactowner fw600">
-                <span>Contact Owner</span>
-                <span><img src="next.svg" alt="" srcset="" class="svgic"></span>
+            <div class="pcont">
+                <div class="desc">
+                    <img src="signup.svg" alt="" class="img">
+                    <div class="details">
+                        <div class="location">Mutare, Hob House</div>
+                        <div class="numdets">
+                            <div class="price">$ 70</div>
+                            <div class="roomcount">2 Rooms</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
+            <div class="pcont">
+                <div class="desc">
+                    <img src="signup.svg" alt="" class="img">
+                    <div class="details">
+                        <div class="location">Mutare, Hob House</div>
+                        <div class="numdets">
+                            <div class="price">$ 70</div>
+                            <div class="roomcount">2 Rooms</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pcont">
+                <div class="desc">
+                    <img src="signup.svg" alt="" class="img">
+                    <div class="details">
+                        <div class="location">Mutare, Hob House</div>
+                        <div class="numdets">
+                            <div class="price">$ 70</div>
+                            <div class="roomcount">2 Rooms</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pcont">
+                <div class="desc">
+                    <img src="signup.svg" alt="" class="img">
+                    <div class="details">
+                        <div class="location">Mutare, Hob House</div>
+                        <div class="numdets">
+                            <div class="price">$ 70</div>
+                            <div class="roomcount">2 Rooms</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pcont">
+                <div class="desc">
+                    <img src="signup.svg" alt="" class="img">
+                    <div class="details">
+                        <div class="location">Mutare, Hob House</div>
+                        <div class="numdets">
+                            <div class="price">$ 70</div>
+                            <div class="roomcount">2 Rooms</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
